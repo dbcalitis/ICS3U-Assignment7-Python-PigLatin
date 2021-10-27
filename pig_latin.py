@@ -10,10 +10,12 @@ def pig_latin(sentence):
     new_words = []
     words = sentence.split()
 
+    # conversion
     for word in words:
         new_word = "{0}{1}ay".format(word[1:], word[0])
         new_words.append(new_word)
 
+    # joining strings
     new_sentence = " ".join(new_words).lower()
 
     return new_sentence
@@ -25,10 +27,10 @@ def main():
 
     # input
     user_input = input("Enter a sentence: ")
-    
+
     # process & output
     print("\n{0}".format(pig_latin(user_input)))
-    
+
     print("\nDone.")
 
 
